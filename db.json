@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "e95a",
+      "name": "Dev ",
+      "email": "devchauhansurat@gmail.com",
+      "password": "123456",
+      "cart": []
+    },
+    {
+      "id": "5a3e",
+      "name": "Jay",
+      "email": "jay@gmail.com",
+      "password": "123456",
+      "cart": []
+    },
+    {
+      "id": "1caf",
+      "name": "Neel",
+      "email": "neel@gmail.com",
+      "password": "123456",
+      "cart": []
+    }
+  ],
+  "LoggedIn": {}
+}
