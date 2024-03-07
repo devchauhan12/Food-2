@@ -39,7 +39,7 @@ const Header = () => {
                         <Nav.Link as={Link} to="/products"> Products </Nav.Link>
                     </Nav>
                     <div className={`d-flex`}>
-                        {/* <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" /> */}
+                        <Form.Control type="search" placeholder="Search" className="me-2" aria-label="Search" />
 
                         {
                             !login ? <>
