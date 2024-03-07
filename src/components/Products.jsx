@@ -174,7 +174,7 @@ const Products = () => {
           <div class="grid grid--3-cols margin-right-md">
             <div class="meal">
               <img
-                src="https://t4.ftcdn.net/jpg/05/85/29/13/360_F_585291338_0J8Q8vYbKDCu8yqqwAO8PsQZ4ESP2zd8.jpg"
+                src="https://i.pinimg.com/originals/95/aa/34/95aa34722ae9ea7e8faa874e5d24ebab.png"
                 class="meal-img"
                 alt="Japanese Gyozas"
               />
@@ -260,7 +260,49 @@ const Products = () => {
             </div>
             <div class="meal">
               <img
-                src="https://images.ctfassets.net/o19mhvm9a2cm/2c7tQ0UDXqyJueB23vGEV7/1bd89889514b84d8d4c56ca23b5c4730/Website_LTO_May2022_Beverage_Lemonade_Peach.png?&q=80&w=200"
+                src="https://purepng.com/public/uploads/large/drinks-wra.png"
+                class="meal-img"
+                alt="Japanese Gyozas"
+              />
+              <div class="meal-content">
+                <div class="meal-tags">
+                  <span class="tag tag--vegan">Vegan</span>
+                </div>
+                <p class="meal-title">Thai Red Curry</p>
+                <button type="button" class="btn btn-sm btn-default">Order Now</button>
+              </div>
+            </div>
+            <div class="meal">
+              <img
+                src="https://www.clipartmax.com/png/full/9-94607_summer-clipart-summer-drink-drinks-png.png"
+                class="meal-img"
+                alt="Japanese Gyozas"
+              />
+              <div class="meal-content">
+                <div class="meal-tags">
+                  <span class="tag tag--vegan">Vegan</span>
+                </div>
+                <p class="meal-title">Thai Red Curry</p>
+                <button type="button" class="btn btn-sm btn-default">Order Now</button>
+              </div>
+            </div>
+            <div class="meal">
+              <img
+                src="https://png.pngtree.com/png-clipart/20231020/original/pngtree-iced-coffee-png-png-image_13381334.png"
+                class="meal-img"
+                alt="Japanese Gyozas"
+              />
+              <div class="meal-content">
+                <div class="meal-tags">
+                  <span class="tag tag--vegan">Vegan</span>
+                </div>
+                <p class="meal-title">Thai Red Curry</p>
+                <button type="button" class="btn btn-sm btn-default">Order Now</button>
+              </div>
+            </div>
+            <div class="meal">
+              <img
+                src="https://png.pngtree.com/png-vector/20231130/ourmid/pngtree-strawberry-protein-shake-png-image_10780145.png"
                 class="meal-img"
                 alt="Japanese Gyozas"
               />
