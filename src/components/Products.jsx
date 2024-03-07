@@ -21,6 +21,7 @@ const Products = () => {
   const [sortByPrice, setSortByPrice] = useState(false);
   const [noRecord, setNoRecord] = useState(false)
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   // console.log(dishes);
 
@@ -86,6 +87,26 @@ const Products = () => {
 
     fetchData()
   }, [searchDish, setDishes, selectedType, sortByPrice])
+
+  const handleAdd = async (id) => {
+    if (logedUser) {
+      const UserCart = (await getDoc(doc(db, `UserCart/${logedUser.uid}`))).data()
+
+      const check = UserCart.cart.some(e => {
+        if (e.id === products[id].id) {
+          e.qty += 1;
+          return true
+        }
+      })
+      if (!check) {
+        UserCart.cart.push({ ...products[id], qty: 1 })
+      }
+      await setDoc(doc(db, "UserCart", logedUser.uid), UserCart);
+      dispatch(add(id));
+    } else {
+      navigate('/login')
+    }
+  }
 
 
   // const handleAddToCart = async (selectedDish) => {
@@ -172,7 +193,27 @@ const Products = () => {
         })} */}
         <section class="section-meals">
           <div class="grid grid--3-cols margin-right-md">
-            <div class="meal">
+
+            {products && products.map((item, id) => {
+              return (
+                <div class="meal">
+                  <img
+                    src={item.image}
+                    class="meal-img"
+                  />
+                  <div class="meal-content">
+                    <div class="meal-tags">
+                      <span class="tag tag--vegan">{item.type}</span>
+                    </div>
+                    <p class="meal-title">{item.title}</p>
+                    <h2 className="price">₹{item.price}</h2>
+                    <button type="button" class="btn btn-sm btn-default" onClick={() => handleAdd(id)}>Order Now</button>
+                  </div>
+                </div>
+              )
+            })}
+
+            {/* <div class="meal">
               <img
                 src="https://i.pinimg.com/originals/95/aa/34/95aa34722ae9ea7e8faa874e5d24ebab.png"
                 class="meal-img"
@@ -313,7 +354,7 @@ const Products = () => {
                 <p class="meal-title">Thai Red Curry</p>
                 <button type="button" class="btn btn-sm btn-default">Order Now</button>
               </div>
-            </div>
+            </div> */}
           </div>
         </section>
 
